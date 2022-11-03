@@ -1,0 +1,12 @@
+h1 {
+    color: green;
+}
+
+#percentbtnspace {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#tipspace, #billspace {
+    height: 40px;
+}
