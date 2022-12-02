@@ -12,6 +12,7 @@ const twentybtn = document.querySelector("#twentybtn");
 var fifthteentip;
 var eighteentip;
 var twentytip;
+var customtip;
 var totalbill;
 
 function tipfifthteen() {
@@ -67,3 +68,30 @@ function tiptwenty() {
 };
 
 twentybtn.addEventListener("click", tiptwenty);
+
+function showCustomInputDiv() {
+    custominputdiv.style.display = "block";
+};
+
+custombtn.addEventListener("click", showCustomInputDiv);
+
+function tipcustom() {
+    function getPercentage(num) {
+        return num * 0.01;
+    }
+    function calculatetip() {
+        var tipspace = document.querySelector("#tipspace");
+        customtip = subtotaltext * getPercentage(custominput.value);
+        tipspace.textContent = `$${customtip.toFixed(2)}`;
+    };
+    function calculatetotal() {
+        var billspace = document.querySelector("#billspace");
+        totalbill = subtotaltext + customtip;
+        billspace.textContent = `$${totalbill.toFixed(2)}`;
+    };
+    storeSubtotal();
+    calculatetip();
+    calculatetotal();
+}
+
+calccustombtn.addEventListener("click", tipcustom);

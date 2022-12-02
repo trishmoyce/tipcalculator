@@ -4,7 +4,16 @@ h1 {
 
 #percentbtnspace {
     padding-top: 5px;
-    padding-bottom: 15px;
+}
+
+#customspace {
+    height: 75px;
+    padding-top: 5px;
+}
+
+#custominputdiv {
+    display: none;
+    padding-top: 5px;
 }
 
 #tipspace, #billspace {
